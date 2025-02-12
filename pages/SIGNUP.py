@@ -11,7 +11,10 @@ with st.form(key = "signuppage"):
     st.session_state.Information["Password"] = st.text_input("Enter your Password")
     submitButton = st.form_submit_button(label = "Submit")
     if submitButton:
-        st.switch_page("Home.py")
+        # need to apply backend to add the data of user
+        # TODO
+        st.switch_page("HOME.py")
 
-st.caption("Already Login ?")
-st.markdown("[Login](Login.py)")
+st.caption("Already have an Account ?")
+if st.button("Login"):
+    st.switch_page("pages/LOGIN.py")
